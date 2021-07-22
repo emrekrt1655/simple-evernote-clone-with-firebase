@@ -1,11 +1,14 @@
 import React from "react";
 import useInput from '../../customHooks/useInput'
+import { addNote } from '../../store/actions/noteAction'
+import {useDispatch} from 'react-redux'
 const Form = () => {
     const [title, bindTitle, resetTitle] = useInput();
     const [content, bindContent, resetContent] = useInput();
+    const dispatch = useDispatch();
     const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(`title, content`, { title, content })
+        e.preventDefault()
+        dispatch(addNote({title, content}))
         resetContent()
         resetTitle()
     }
