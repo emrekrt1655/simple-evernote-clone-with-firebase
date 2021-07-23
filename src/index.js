@@ -29,10 +29,10 @@ ReactDOM.render(
 
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
   </ReactReduxFirebaseProvider>
 </Provider>,
-document.getElementById('root')
+  document.getElementById('root')
 );
 
 
