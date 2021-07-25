@@ -11,7 +11,7 @@ const Favorite = () => {
     const favnotes = useSelector(state => state.firestore.ordered.favnotes)
     console.log(`favnotes`, favnotes)
     return (
-        <NotesList notes={favnotes}/>
+        <NotesList notes={favnotes} />
     )
 }
 

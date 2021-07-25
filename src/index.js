@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore, applyMiddleware, compose} from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from './store/reducers/rootReducer'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import firebase from 'firebase/app'
 import thunk from 'redux-thunk'
-import {ReactReduxFirebaseProvider, getFirebase} from 'react-redux-firebase'
-import {createFirestoreInstance, getFirestore, reduxFirestore} from 'redux-firestore'
+import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase'
+import { createFirestoreInstance, getFirestore, reduxFirestore } from 'redux-firestore'
 import fbconfig from './config/fbconfig'
 
 const store = createStore(rootReducer, compose(
-  applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+  applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
   reduxFirestore(fbconfig)
 ))
 const rrfProps = {
@@ -24,14 +24,14 @@ const rrfProps = {
 }
 
 ReactDOM.render(
-<Provider store={store}>
-  <ReactReduxFirebaseProvider {...rrfProps}>
+  <Provider store={store}>
+    <ReactReduxFirebaseProvider {...rrfProps}>
 
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </ReactReduxFirebaseProvider>
-</Provider>,
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ReactReduxFirebaseProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

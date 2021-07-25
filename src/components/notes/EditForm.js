@@ -13,7 +13,7 @@ const EditForm = () => {
     const history = useHistory()
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(editNote({id: note.id, title, content}))
+        dispatch(editNote({ id: note.id, title, content }))
         resetContent()
         resetTitle()
         history.push('/')

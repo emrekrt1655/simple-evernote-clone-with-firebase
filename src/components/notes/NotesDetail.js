@@ -8,7 +8,7 @@ const NotesDetail = (props) => {
     useFirestoreConnect(([{ collection: 'notes', doc: id }]));
     const note = useSelector(({ firestore: { data } }) => data.notes && data.notes[id])
 
-    const Markup = !isLoaded(note) ?( <div className="container section">
+    const Markup = !isLoaded(note) ? (<div className="container section">
         <div className="card z-depth-0">
             <div className="card-content">
                 <span className="card-title"> Notes are Loading... </span>
@@ -16,7 +16,7 @@ const NotesDetail = (props) => {
             <div className="card-action grey lighten-4 grey-text">
             </div>
         </div>
-    </div>) : isEmpty(note) ?( <div className="container section">
+    </div>) : isEmpty(note) ? (<div className="container section">
         <div className="card z-depth-0">
             <div className="card-content">
                 <span className="card-title"> There is no content </span>
@@ -25,7 +25,7 @@ const NotesDetail = (props) => {
             <div className="card-action grey lighten-4 grey-text">
             </div>
         </div>
-    </div> ): (<div className="container section">
+    </div>) : (<div className="container section">
         <div className="card z-depth-0">
             <div className="card-content">
                 <span className="card-title"> {note?.title} </span>
