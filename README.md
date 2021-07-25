@@ -1,3 +1,12 @@
+# In this project i aimed to a simple evernote app. I used firebase for database. You can make CRUD operation and also you can add the notes to the fav.  
+
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_PROJECTID=
+REACT_APP_STORAGE_BUCKET=
+REACT_APP_MESSAGING_SENDER_ID =
+REACT_APP_APP_ID = 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
