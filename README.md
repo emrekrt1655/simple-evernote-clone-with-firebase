@@ -1,4 +1,4 @@
-# In this project i aimed to a simple evernote app. I used firebase for database. You can make CRUD operation and also you can add the notes to the fav.  
+# In this project i aimed to a simple evernote app. I used firebase for database and redux for state management. You can make CRUD operation and also you can add the notes to the fav.  
 
 REACT_APP_API_KEY=
 REACT_APP_AUTH_DOMAIN=
